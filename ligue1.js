@@ -1,7 +1,7 @@
 const videoSection = document.querySelector('section');
 
 function getVideos() {
-  fetch('https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=UU9eH7fXbdaGeFHfu-APAQNA&maxResults=10&key=AIzaSyC3pq1w5U2oWLmxr0ufNnbJcMGikYVlFOw')
+  
     .then(res => res.json())
     .then(data => {
       if (!data.items || data.items.length === 0) {
