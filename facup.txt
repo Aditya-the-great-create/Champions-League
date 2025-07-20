@@ -1,0 +1,11 @@
+api key: AIzaSyC3pq1w5U2oWLmxr0ufNnbJcMGikYVlFOw
+
+channel id: UC9eH7fXbdaGeFHfu-APAQNA
+
+uploads id: UU9eH7fXbdaGeFHfu-APAQNA
+
+http link: https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=UU9eH7fXbdaGeFHfu-APAQNA&maxResults=25&key=AIzaSyC3pq1w5U2oWLmxr0ufNnbJcMGikYVlFOw
+
+video link: https://www.youtube.com/watch?v=irhEwRQF_F8
+
+https://www.googleapis.com/youtube/v3/videos?part=snippet&id=dQw4w9WgXcQ&key=AIzaSyC3pq1w5U2oWLmxr0ufNnbJcMGikYVlFOw
