@@ -13,7 +13,6 @@ function getVideos() {
         const videoId = el.snippet.resourceId.videoId;
         const title = el.snippet.title;
 
-        // Smart fallback for thumbnails
         const thumbnails = el.snippet.thumbnails;
         const thumbUrl =
           thumbnails.maxres?.url ||
@@ -22,7 +21,6 @@ function getVideos() {
           thumbnails.medium?.url ||
           thumbnails.default?.url;
 
-        // Only render if thumbnail and video ID are available
         if (thumbUrl && videoId) {
           videoSection.innerHTML += `
             <a target="_blank" href="https://www.youtube.com/watch?v=${videoId}" style="display: block; margin-bottom: 16px;">
