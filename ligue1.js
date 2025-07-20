@@ -1,7 +1,9 @@
 const videoSection = document.querySelector('section');
 
+fetch('Add your own link')
+
 function getVideos() {
-  fetch('Add your own link')
+  
     .then(res => res.json())
     .then(data => {
       if (!data.items || data.items.length === 0) {
