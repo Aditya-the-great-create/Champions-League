@@ -1,9 +1,11 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Dashboard</title>
     <script defer src="./ligue1.js"></script>
+    <script src="laliga.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,8 +13,8 @@
 
     <!-- Use only one <h1> per page for accessibility -->
     <div class="ucl">
-        <div class="top-right">
-            <a href="#">Sign In</a> | <a href="register.html">Register</a>
+        <div class="right">
+            <a href="register.html">Register</a>
         </div>
     
         <h1>
@@ -20,17 +22,37 @@
         </h1>    
 
         <div class="right">
-            <a href="microsoftoffice.html"> Microsoft Office </a> | <a href="googlesuite.html"> Google Suite </a> | <a href="communicationtools.html">Communication Tools</a> | <a href="privacyandsecurity.html">Privacy/Security</a>
+            <a href="microsoftoffice.html"> Microsoft Office </a> | <a href="googlesuite.html"> Google Suite </a> | <a href="communicationtools.html">Communication Tools</a> | <a href="privacyandsecurity.html">Privacy/Security </a>| <a href="fashield.html">Book a session</a>
         </div>
     
-        <div class="container">
-            <form action="" class="search-bar">
-                <input type="text" name="q" placeholder="Search Anything"> 
-                <button type="submit"><img src="search.png">
-                
-                </button>
-            </form>
-        </div>
+        <form onsubmit="return redirectSearch()" class="search-bar">
+            <input type="text" id="searchInput" placeholder="Search Anything">
+            <button type="submit"><img src="search.png"></button>
+          </form>
+          
     </div>
+    <script>
+        function redirectSearch() {
+            const query = document.getElementById("seachinput").value.trim().toLowerCase();
+            const redirects = {
+                "Microsoft Office": "microsoftoffice.html",
+                "Google Suite": "googlesuite.html",
+                "Communication Tools": "communicationtools.html",
+                "Privacy/Security": "privacyandsecurity.html",
+                "book a session": "fashield.html"
+            };
+
+            for(const keyword in redirects) {
+                if(query.includes(keyword)) {
+                    window.location.href = redirects[keyword];
+                    return false; // Prevent form submission
+                }
+            }
+            alert("No matching page found for your search.");
+            return false;
+        }
+
+    </script>
+
 </body>
 </html>
